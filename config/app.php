@@ -158,7 +158,9 @@ return [
 
         'Collective\Html\HtmlServiceProvider',
 
-        'Laracasts\Flash\FlashServiceProvider'
+        'Laracasts\Flash\FlashServiceProvider',
+
+        Jenssegers\Mongodb\MongodbServiceProvider::class,
     ],
 
     /*

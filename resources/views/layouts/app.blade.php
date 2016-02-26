@@ -123,11 +123,16 @@
   </header> <!-- /#page-header -->
 
   <div class="row">
-    <section class="col-sm-12">
-        <a id="main-content"></a>
-            <h1 class="page-header">Dashboard</h1>
-        </a>
+    <div class="col-sm-12">
+        <div class="pull-right">
+            {{ HTML::link('calender', 'Calender', array('class' => 'btn btn-primary'))}}
+            {{ HTML::link('graph', 'Graph', array('class' => 'btn btn-primary'))}}
+        </div>
+    </div>
+  </div>
 
+  <div class="row" style="margin-top:10px">
+    <section class="col-sm-12">
         @yield('content')
         
     </section>
