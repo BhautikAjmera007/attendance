@@ -2,7 +2,7 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model; 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Bican\Roles\Traits\HasRoleAndPermission;
@@ -10,15 +10,13 @@ use Bican\Roles\Contracts\HasRoleAndPermission as HasRoleAndPermissionContract;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
-class User extends Model implements AuthenticatableContract, CanResetPasswordContract, HasRoleAndPermissionContract
+class roles extends Model implements AuthenticatableContract, CanResetPasswordContract, HasRoleAndPermissionContract
 {
-	protected $table = 'users';
+	protected $table = 'roles';
 
 	protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'slug', 'description', 'level',
     ];
-
-    protected $hidden = ['remember_token'];
 
 	use Authenticatable, CanResetPassword, HasRoleAndPermission;
 }

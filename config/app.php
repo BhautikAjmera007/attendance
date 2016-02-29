@@ -161,6 +161,14 @@ return [
         'Laracasts\Flash\FlashServiceProvider',
 
         Jenssegers\Mongodb\MongodbServiceProvider::class,
+
+        Illuminate\Foundation\Providers\ArtisanServiceProvider::class,
+
+         /**
+         * Third Party Service Providers...
+         */
+        Bican\Roles\RolesServiceProvider::class,
+
     ],
 
     /*

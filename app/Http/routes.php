@@ -1,10 +1,8 @@
 <?php
 
 Route::get('/', function () {
-    return view('index');
+    return view('calender/index');
 });
-
-Route::post('/login','Login\LoginController@getData');
 
 Route::group(['middleware' => ['web']], function () {
     
@@ -12,7 +10,5 @@ Route::group(['middleware' => ['web']], function () {
 	    return view('calender/index');
 	});
 
-	Route::get('graph', function () {
-	    return view('graph/graph');
-	});
+    Route::get('graph','Graph\GraphController@check');
 });
