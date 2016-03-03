@@ -9,10 +9,12 @@ use Bican\Roles\Traits\HasRoleAndPermission;
 use Bican\Roles\Contracts\HasRoleAndPermission as HasRoleAndPermissionContract;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Jenssegers\Mongodb\Eloquent\Model as Moloquent;
 
-class User extends Model implements AuthenticatableContract, CanResetPasswordContract, HasRoleAndPermissionContract
+class User extends Moloquent implements AuthenticatableContract, CanResetPasswordContract, HasRoleAndPermissionContract
 {
-	protected $table = 'users';
+	protected $connection = 'mongodb';
+	protected $collection = 'users';
 
 	protected $fillable = [
         'name', 'email', 'password',

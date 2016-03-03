@@ -218,7 +218,9 @@ return [
         'Form' => 'Collective\Html\FormFacade',
         'HTML' => 'Collective\Html\HtmlFacade',
 
-        'Flash' => 'Laracasts\Flash\Flash'
+        'Flash' => 'Laracasts\Flash\Flash',
+
+        'Moloquent'       => 'Jenssegers\Mongodb\Eloquent\Model'
     ],
 
 ];
